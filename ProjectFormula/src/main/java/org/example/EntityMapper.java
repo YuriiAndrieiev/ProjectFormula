@@ -48,7 +48,8 @@ public class EntityMapper {
         return racers;
     }
 
-    public List<String> CreateListCars() {    ReadFile readFiles = new ReadFile();
+    public List<String> CreateListCars() {
+        ReadFile readFiles = new ReadFile();
         String abbreviations = "C:\\projects\\IdeaProjects\\ProjectFormula\\ProjectFormula\\src\\main\\resources\\abbreviations.txt";
         List<String> abbreviationsTxt = readFiles.readFile(abbreviations);
         List<String> abbreviationsWithoutAbb = new ArrayList<>();

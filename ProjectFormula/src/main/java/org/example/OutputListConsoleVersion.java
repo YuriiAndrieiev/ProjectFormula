@@ -3,6 +3,7 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class OutputListConsoleVersion {
 
     public List<String> createOutputListConsoleVersion () {

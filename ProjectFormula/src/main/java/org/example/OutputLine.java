@@ -2,6 +2,7 @@ package org.example;
 
 import java.time.Duration;
 
+
 public class OutputLine {
 
     private String racer;
