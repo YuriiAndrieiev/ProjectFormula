@@ -4,25 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class OutputListConsoleVersion {
+public class RacerPrinter {
 
-    public List<String> createOutputListConsoleVersion () {
-        OutputLinesList outputLinesList = new OutputLinesList();
-        List<OutputLine> outputLines = outputLinesList.createListOutputines();
+    EntityMapper entityMapper = new EntityMapper();
+    public List<String> racerTabPrint (List<Racer> racers) {
         List<String>outputList = new ArrayList<>();
-        for (int i = 0; i < outputLines.size(); i++) {
+        for (int i = 0; i < racers.size(); i++) {
             int pos = i+1;
-            StringBuilder racerStringBuilder = new StringBuilder(pos +outputLines.get(i).getRacer());
+            StringBuilder racerStringBuilder = new StringBuilder(pos +racers.get(i).getRacer());
             while (racerStringBuilder.length() < 27) {
                 racerStringBuilder.append(" ");
             }
             String racer = racerStringBuilder.toString();
-            StringBuilder car = new StringBuilder("|" + outputLines.get(i).getCar());
+            StringBuilder car = new StringBuilder("|" + racers.get(i).getCar());
             while (car.length() < 36) {
                 car.append(" ");
             }
             String carString = car.toString();
-            String timeLoopString = outputLines.get(i).getTimeLoop().toString();
+            String timeLoopString = racers.get(i).getTimeLoop().toString();
             char[] timeLoopArray = timeLoopString.toCharArray();
             StringBuilder timeLoopStringbuilder = new StringBuilder("|");
             for (int j = 0; j < timeLoopArray.length - 1; j++) {

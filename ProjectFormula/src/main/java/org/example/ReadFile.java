@@ -12,19 +12,19 @@ import java.util.stream.Collectors;
 public class ReadFile {
 
     public List<String> readFile(String string) {
-        List<String> fileEnd= new ArrayList<>();
+        List<String> readedFile = new ArrayList<>();
         try(BufferedReader bufferedReader = new BufferedReader(
                 new FileReader(string))) {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                fileEnd.add(line);
+                readedFile.add(line);
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        fileEnd = (List<String>) fileEnd.stream().sorted().collect(Collectors.toList());
-        return fileEnd;
+        readedFile = (List<String>) readedFile.stream().sorted().collect(Collectors.toList());
+        return readedFile;
     }
 }
